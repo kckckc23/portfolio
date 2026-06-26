@@ -118,10 +118,10 @@
             --panel-2:   #e2d4b8;   /* deeper inset */
             --ink:       #241d16;   /* sepia black */
             --ink-soft:  #6b6052;
-            --ink-faint: #a1937c;
+            --ink-faint: #6f6149;   /* darkened for WCAG AA on parchment & panel */
             --rule:      #d6c8ab;   /* hairlines */
             --rule-bold: #b8a07a;
-            --rubric:    #c8412b;   /* the one accent — red */
+            --rubric:    #a8331f;   /* the one accent — red (AA-contrast on panel) */
             --rubric-dk: #9e2f1f;
 
             --display: 'IM Fell English', Georgia, serif;
@@ -404,7 +404,7 @@
         }
         .quest:last-of-type { border-bottom: 1px solid var(--rule); }
         .quest:hover { background: var(--panel); padding-left: 16px; }
-        .quest .qtitle { font-family: var(--display); font-size: 1.55rem; line-height: 1.1; }
+        .quest .qtitle { font-family: var(--display); font-weight: 400; font-size: 1.55rem; line-height: 1.1; }
         .quest .qtype { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.04em; color: var(--ink-faint); text-align: right; white-space: nowrap; }
         .quest .qdesc { grid-column: 1 / -1; color: var(--ink-soft); font-size: 1.02rem; max-width: 60ch; }
         .quest .qreward {
@@ -434,9 +434,8 @@
         /* ---- Proficiencies ---- */
         .prof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0 36px; }
         .prof { padding: 18px 4px; border-top: 1px solid var(--rule); }
-        .prof h4 { font-family: var(--sc); font-size: 0.84rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--rubric); margin-bottom: 8px; }
+        .prof h3 { font-family: var(--sc); font-size: 0.84rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--rubric); margin-bottom: 8px; }
         .prof .items { font-size: 1.12rem; line-height: 1.85; }
-        .prof .items span:not(:last-child)::after { content: ' · '; color: var(--ink-faint); }
 
         /* ---- Trophies & Loot ---- */
         .loot { list-style: none; }
@@ -509,12 +508,12 @@
 </head>
 
 <body>
-    <a class="skip-link" href="#quests">Skip to content</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
     <!-- ============ NAVBAR ============ -->
     <nav class="topbar" aria-label="Primary">
         <div class="topbar-inner">
-            <a class="brand" href="#top" aria-label="Karan Chauhan — back to top">
+            <a class="brand" href="#top" title="Karan Chauhan — back to top">
                 <svg class="sigil" viewBox="0 0 100 100" aria-hidden="true">
                     <polygon points="50,6 90,29 90,71 50,94 10,71 10,29"/>
                     <text x="50" y="64">20</text>
@@ -540,6 +539,8 @@
     <button class="to-top" id="toTop" aria-label="Back to top" title="Back to top">↑</button>
 
     <div class="sheet">
+      <main id="main-content" tabindex="-1">
+        <article>
 
         <!-- ============ MASTHEAD ============ -->
         <header class="masthead" id="top">
@@ -643,36 +644,36 @@
                 </div>
 
                 <article class="quest">
-                    <span class="qtitle">Accelix.ai</span>
-                    <span class="qtype">React · Next.js · AI Platform</span>
+                    <h4 class="qtitle">Accelix.ai</h4>
+                    <p class="qtype">React · Next.js · AI Platform</p>
                     <p class="qdesc">An AI-powered pre-design validation platform for electronics hardware. Nine analysis engines audit architecture, compliance, and risk before a single schematic is drawn — delivering what hardware consultants take weeks to produce, in under 15 minutes.</p>
                     <a class="qreward" href="https://accelix.ai" target="_blank" rel="noopener">Claim reward →</a>
                 </article>
 
                 <article class="quest">
-                    <span class="qtitle">PDF Tools Workspace</span>
-                    <span class="qtype">WebAssembly · pdf-lib · Client-Side</span>
+                    <h4 class="qtitle">PDF Tools Workspace</h4>
+                    <p class="qtype">WebAssembly · pdf-lib · Client-Side</p>
                     <p class="qdesc">A 100% client-side PDF workspace — merge, split, and delete pages entirely in the browser's memory thread via pdf-lib and WebAssembly. Files never leave your device, validation badges make the privacy guarantee visible, and it keeps working fully offline with zero backend calls.</p>
                     <a class="qreward" href="https://pdfly-chi.vercel.app/" target="_blank" rel="noopener">Claim reward →</a>
                 </article>
 
                 <article class="quest">
-                    <span class="qtitle">NexusIT</span>
-                    <span class="qtype">Next.js · Consultancy</span>
+                    <h4 class="qtitle">NexusIT</h4>
+                    <p class="qtype">Next.js · Consultancy</p>
                     <p class="qdesc">Solving complexity through strategy and design — digital strategy, data &amp; AI, customer experience, and modernization.</p>
                     <a class="qreward" href="https://nexusit-gamma.vercel.app/" target="_blank" rel="noopener">Claim reward →</a>
                 </article>
 
                 <article class="quest">
-                    <span class="qtitle">EduChain Lib</span>
-                    <span class="qtype">Web3 · Polygon · IPFS</span>
+                    <h4 class="qtitle">EduChain Lib</h4>
+                    <p class="qtype">Web3 · Polygon · IPFS</p>
                     <p class="qdesc">A decentralized educational library. Guards creators' work behind smart-contract-gated access and automates royalty distribution on the Polygon chain.</p>
                     <a class="qreward" href="https://digital-library-bice.vercel.app/" target="_blank" rel="noopener">Claim reward →</a>
                 </article>
 
                 <article class="quest">
-                    <span class="qtitle">Ocean Amore</span>
-                    <span class="qtype">HTML · CSS · JS</span>
+                    <h4 class="qtitle">Ocean Amore</h4>
+                    <p class="qtype">HTML · CSS · JS</p>
                     <p class="qdesc">A resin product store, built end-to-end from design to deployment, with measured animation and interactive components.</p>
                     <a class="qreward" href="https://oceanamore.vercel.app/" target="_blank" rel="noopener">Claim reward →</a>
                 </article>
@@ -695,8 +696,8 @@
                 </div>
 
                 <article class="quest">
-                    <span class="qtitle">Arcadeium</span>
-                    <span class="qtype">Vanilla JS · Arcade</span>
+                    <h4 class="qtitle">Arcadeium</h4>
+                    <p class="qtype">Vanilla JS · Arcade</p>
                     <p class="qdesc">Classic arcade games — Snake, Tic-Tac-Toe, Pong, Space Invaders — with reusable gameplay logic and clean state management.</p>
                     <a class="qreward" href="https://arcadeium.vercel.app/" target="_blank" rel="noopener">Claim reward →</a>
                 </article>
@@ -779,10 +780,10 @@
             </div>
 
             <div class="prof-grid">
-                <div class="prof"><h4>Languages</h4><div class="items"><span>JavaScript</span><span>Solidity</span><span>HTML/CSS</span><span>Python</span></div></div>
-                <div class="prof"><h4>Frameworks</h4><div class="items"><span>React</span><span>Next.js</span><span>Node</span><span>Express</span><span>Jetpack Compose</span></div></div>
-                <div class="prof"><h4>Tools &amp; Platforms</h4><div class="items"><span>Git</span><span>IPFS / Web3</span><span>Firebase</span><span>Android Studio</span></div></div>
-                <div class="prof"><h4>Databases</h4><div class="items"><span>MongoDB</span><span>MySQL</span></div></div>
+                <div class="prof"><h3>Languages</h3><p class="items">JavaScript · Solidity · HTML/CSS · Python</p></div>
+                <div class="prof"><h3>Frameworks</h3><p class="items">React · Next.js · Node · Express · Jetpack Compose</p></div>
+                <div class="prof"><h3>Tools &amp; Platforms</h3><p class="items">Git · IPFS / Web3 · Firebase · Android Studio</p></div>
+                <div class="prof"><h3>Databases</h3><p class="items">MongoDB · MySQL</p></div>
             </div>
         </section>
 
@@ -822,6 +823,9 @@
                 </div>
             </div>
         </section>
+
+        </article>
+      </main>
 
         <!-- ============ COLOPHON ============ -->
         <footer>
