@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karan Chauhan - Full Stack Engineer</title>
+    <title>Karan Chauhan — Full Stack Engineer | Web Developer Portfolio</title>
     <meta name="description"
-        content="Karan Chauhan is a Full Stack Engineer in Vadodara, India, building scalable web applications with Next.js, Python, REST APIs, PostgreSQL, and multi-stage LLM workflows.">
+        content="Karan Chauhan is a Full Stack Engineer in Vadodara, India. I build scalable web applications with Next.js, Python, PostgreSQL, and AI-powered LLM workflows. View my projects and get in touch.">
     <meta name="author" content="Karan Chauhan">
+    <meta name="keywords" content="Karan Chauhan, Full Stack Engineer, Web Developer, Next.js, React, Python, PostgreSQL, LLM, AI, Portfolio, Vadodara, India">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1, major:referer">
     <meta name="theme-color" content="#c8412b">
     <link rel="canonical" href="https://www.karanchauhan.me/">
 
@@ -22,8 +24,8 @@
     <!-- Open Graph -->
     <meta property="og:type" content="profile">
     <meta property="og:site_name" content="Karan Chauhan">
-    <meta property="og:title" content="Karan Chauhan - Full Stack Engineer">
-    <meta property="og:description" content="Full Stack Engineer in Vadodara, India building scalable web applications, production-ready platforms, and multi-stage LLM workflows.">
+    <meta property="og:title" content="Karan Chauhan — Full Stack Engineer | Web Developer Portfolio">
+    <meta property="og:description" content="Full Stack Engineer in Vadodara, India building scalable web applications, production-ready platforms, and AI-powered LLM workflows.">
     <meta property="og:url" content="https://www.karanchauhan.me/">
     <meta property="og:image" content="https://www.karanchauhan.me/og-image.png">
     <meta property="og:image:width" content="1200">
@@ -35,8 +37,8 @@
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Karan Chauhan - Full Stack Engineer">
-    <meta name="twitter:description" content="Full Stack Engineer in Vadodara, India building scalable web applications, production-ready platforms, and multi-stage LLM workflows.">
+    <meta name="twitter:title" content="Karan Chauhan — Full Stack Engineer | Web Developer Portfolio">
+    <meta name="twitter:description" content="Full Stack Engineer in Vadodara, India building scalable web applications, production-ready platforms, and AI-powered LLM workflows.">
     <meta name="twitter:image" content="https://www.karanchauhan.me/og-image.png">
     <meta name="twitter:image:alt" content="Karan Chauhan - Full Stack Engineer">
     <meta name="twitter:creator" content="@karanchauhan_05">
@@ -91,10 +93,11 @@
           "@type": "ProfilePage",
           "@id": "https://www.karanchauhan.me/#webpage",
           "url": "https://www.karanchauhan.me/",
-          "name": "Karan Chauhan - Full Stack Engineer",
+          "name": "Karan Chauhan - Full Stack Engineer Portfolio",
           "isPartOf": { "@id": "https://www.karanchauhan.me/#website" },
           "mainEntity": { "@id": "https://www.karanchauhan.me/#person" },
-          "inLanguage": "en"
+          "inLanguage": "en",
+          "description": "Portfolio of Karan Chauhan - Full Stack Engineer building scalable web applications with Next.js, Python, and AI-powered LLM workflows."
         }
       ]
     }
@@ -109,9 +112,8 @@
 
     <style>
         /* =======================================================================
-           A FINE-PRESS D&D CHARACTER SHEET
+           A FINE-PRESS PORTFOLIO
            Illuminated-manuscript paper, sepia ink, rubric-red emphasis.
-           Niches: anime (portrait), D&D (the whole frame), brainrot (conditions).
            ======================================================================= */
         :root {
             --paper:     #f2e9d8;   /* parchment */
@@ -168,7 +170,7 @@
         }
         .skip-link:focus { top: 10px; }
 
-        /* =================== NAVBAR (rulebook index) =================== */
+        /* =================== NAVBAR (primary navigation) =================== */
         .topbar {
             position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: var(--navh);
             background: color-mix(in srgb, var(--paper) 88%, transparent);
@@ -180,9 +182,9 @@
             display: flex; align-items: center; justify-content: space-between; gap: 16px;
         }
         .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-        .brand .sigil { width: 26px; height: 26px; flex-shrink: 0; }
-        .brand .sigil polygon { fill: none; stroke: var(--ink); stroke-width: 5; stroke-linejoin: round; }
-        .brand .sigil text { font-family: var(--display); font-size: 38px; fill: var(--rubric); text-anchor: middle; }
+        .brand .brand-mark { width: 26px; height: 26px; flex-shrink: 0; }
+        .brand .brand-mark polygon { fill: none; stroke: var(--ink); stroke-width: 5; stroke-linejoin: round; }
+        .brand .brand-mark text { font-family: var(--display); font-size: 38px; fill: var(--rubric); text-anchor: middle; }
         .brand-name { font-family: var(--display); font-size: 1.18rem; line-height: 1; }
         .brand-tag { font-family: var(--mono); font-size: 0.6rem; border: 1px solid var(--ink); padding: 1px 5px; border-radius: 2px; color: var(--ink-soft); }
 
@@ -193,7 +195,6 @@
         }
         .nav-links a:hover { color: var(--rubric); }
         .nav-links a.active { color: var(--ink); }
-        .nav-gloss { display: none; }   /* plain label shown only in the mobile drawer */
         .nav-links a.active::after {
             content: ''; position: absolute; left: 0; right: 0; bottom: -3px; height: 2px; background: var(--rubric);
         }
@@ -235,12 +236,9 @@
             .nav-links li { border-bottom: 1px solid var(--rule); }
             .nav-links a { display: block; padding: 15px 26px; font-size: 1.12rem; color: var(--ink); }
             .nav-links a::before { content: '✦ '; color: var(--ink-faint); }
-            .nav-gloss { display: inline; font-family: var(--body); font-style: italic; font-size: 0.84rem; letter-spacing: 0; text-transform: none; color: var(--ink-faint); }
-            .nav-gloss::before { content: ' - '; }
             .nav-links a:hover { color: var(--rubric); }
             .nav-links a.active { background: var(--panel); color: var(--rubric); }
             .nav-links a.active::before { color: var(--rubric); }
-            .nav-links a.active::after { display: none; }
 
             .nav-scrim {
                 display: block; position: fixed; inset: var(--navh) 0 0 0; z-index: 99;
@@ -252,13 +250,7 @@
 
         /* ---- type utilities ---- */
         .sc      { font-family: var(--sc); letter-spacing: 0.04em; }
-        .mono    { font-family: var(--mono); }
         .rubric  { color: var(--rubric); }
-        .eyebrow {
-            font-family: var(--sc); font-size: 0.84rem; letter-spacing: 0.16em;
-            text-transform: uppercase; color: var(--rubric);
-        }
-        .dice { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; color: var(--ink-faint); }
 
         hr.rule  { border: 0; height: 1px; background: var(--rule); }
         hr.double {
@@ -290,20 +282,11 @@
             font-family: var(--sc); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase;
             border: 1.5px solid var(--ink); padding: 3px 11px; border-radius: 2px;
         }
-        .pill.lvl { background: var(--ink); color: var(--paper); }
-        .pill.align { border-color: var(--rubric); color: var(--rubric); }
-        .flavor {
+        .intro {
             font-family: var(--body); font-style: italic; font-size: 1.18rem; line-height: 1.5;
             color: var(--ink); max-width: 46ch;
             border-left: 3px solid var(--rubric); padding-left: 16px;
         }
-        /* plain-language "how to read this" key - uses the utility face to read as a system note */
-        .decoder {
-            display: flex; gap: 9px; align-items: baseline; margin-top: 18px;
-            font-family: var(--mono); font-size: 0.74rem; line-height: 1.5; letter-spacing: 0.01em;
-            color: var(--ink-soft); max-width: 52ch;
-        }
-        .decoder::before { content: '❖'; color: var(--rubric); flex-shrink: 0; }
 
         /* résumé download - primary call-to-action */
         .resume-btn {
@@ -319,135 +302,74 @@
         .resume-btn .rb-ic { font-family: var(--mono); font-size: 1.05rem; line-height: 1; }
 
         /* plain gloss under a themed section heading */
-        .sec-head .plain, .block-note {
+        .sec-head .plain {
             font-family: var(--body); color: var(--ink-soft); font-style: italic; font-size: 1.02rem;
+            display: block; margin-top: 8px; max-width: 56ch;
         }
-        .sec-head .plain { display: block; margin-top: 8px; max-width: 56ch; }
-        .block-note { max-width: 58ch; margin: -8px 0 24px; }
-
-        /* =================== STAT BLOCK (signature) =================== */
         .block { padding: 40px 0; }
-        .block-head {
-            display: flex; align-items: baseline; gap: 14px; margin-bottom: 22px;
-        }
-        .block-head h2 {
-            font-family: var(--display); font-weight: 400; font-size: clamp(1.8rem, 5vw, 2.6rem);
-            letter-spacing: -0.005em; line-height: 1;
-        }
-        .block-head .barline { flex: 1; height: 1px; background: var(--rule-bold); align-self: center; }
-        .block-head .tag { font-family: var(--sc); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
 
-        .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: start; }
-
-        .scores { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-        .score {
-            background: var(--panel); border: 2px solid var(--ink); border-radius: 3px;
-            text-align: center; padding: 12px 6px 22px; position: relative;
-        }
-        .score .ab { font-family: var(--sc); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); }
-        .score .mod { font-family: var(--display); font-size: 2.5rem; line-height: 1; margin: 6px 0 2px; }
-        .score .raw {
-            position: absolute; left: 50%; bottom: -13px; transform: translateX(-50%);
-            font-family: var(--mono); font-size: 0.74rem; font-weight: 700;
-            background: var(--paper); border: 2px solid var(--ink); border-radius: 999px;
-            min-width: 30px; padding: 2px 4px;
-        }
-
-        /* d20 + conditions column */
-        .aside { display: flex; flex-direction: column; gap: 22px; }
-        .d20-card {
-            background: var(--panel); border: 2px solid var(--ink); border-radius: 3px;
-            padding: 16px; display: flex; gap: 16px; align-items: center;
-        }
-        .d20 { width: 78px; height: 78px; flex-shrink: 0; cursor: pointer; transition: transform .2s var(--ease); }
-        .d20:hover { transform: rotate(-8deg); }
-        .d20.rolling { animation: shake .4s linear; }
-        @keyframes shake {
-            0%,100% { transform: rotate(0); } 20% { transform: rotate(-14deg); }
-            40% { transform: rotate(12deg); } 60% { transform: rotate(-8deg); } 80% { transform: rotate(6deg); }
-        }
-        .d20 polygon, .d20 line { fill: none; stroke: var(--ink); stroke-width: 3; stroke-linejoin: round; }
-        .d20 .face { fill: var(--paper); }
-        .d20 .num { font-family: var(--display); font-size: 30px; fill: var(--ink); stroke: none; text-anchor: middle; transition: fill .15s var(--ease); }
-        .d20 .num.crit { fill: var(--rubric); }
-        .d20 .num.fail { fill: var(--ink-faint); }
-        .d20-card .roll-txt { font-family: var(--body); }
-        .d20-card .roll-txt b { font-family: var(--sc); letter-spacing: 0.05em; color: var(--rubric); display: block; font-size: 0.92rem; }
-        .d20-card .roll-txt span { font-size: 0.92rem; color: var(--ink-soft); }
-
-        .conditions {
-            background: var(--panel); border: 2px solid var(--ink); border-radius: 3px; padding: 16px 18px;
-        }
-        .conditions .lab { font-family: var(--sc); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--rubric); margin-bottom: 8px; }
-        .conditions ul { list-style: none; }
-        .conditions li { font-size: 0.98rem; padding: 3px 0; display: flex; gap: 9px; align-items: baseline; }
-        .conditions li::before { content: '◆'; color: var(--rubric); font-size: 0.6rem; }
-        .conditions li em { color: var(--ink-faint); font-size: 0.84rem; font-style: italic; }
 
         /* =================== GENERIC SECTION =================== */
         section { padding: 18px 0 26px; }
         .sec-head { margin-bottom: 26px; }
-        .sec-head .eyebrow { display: block; margin-bottom: 4px; }
         .sec-head h2 { font-family: var(--display); font-weight: 400; font-size: clamp(2rem, 6vw, 3.1rem); line-height: 1; letter-spacing: -0.01em; }
 
-        /* ---- Campaign Log: project categories ---- */
-        .quest-group + .quest-group { margin-top: 44px; }
+        /* ---- Projects: categories ---- */
+        .project-group + .project-group { margin-top: 44px; }
         .cat-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 4px; }
         .cat-head .cat-name { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1; }
-        .cat-head .cat-tag { font-family: var(--sc); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--rubric); }
         .cat-head .cat-rule { flex: 1; height: 1px; background: var(--rule-bold); align-self: center; }
         .cat-head .cat-count { font-family: var(--mono); font-size: 0.78rem; color: var(--ink-faint); }
 
-        .quest {
+        .project {
             display: grid; grid-template-columns: 1fr auto; gap: 4px 20px;
             align-items: baseline; padding: 20px 6px; border-top: 1px solid var(--rule);
             transition: background .25s var(--ease), padding-left .3s var(--ease);
         }
-        .quest:last-of-type { border-bottom: 1px solid var(--rule); }
-        .quest:hover { background: var(--panel); padding-left: 16px; }
-        .quest .qtitle { font-family: var(--display); font-weight: 400; font-size: 1.55rem; line-height: 1.1; }
-        .quest .qtype { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.04em; color: var(--ink-faint); text-align: right; white-space: nowrap; }
-        .quest .qdesc { grid-column: 1 / -1; color: var(--ink-soft); font-size: 1.02rem; max-width: 60ch; }
-        .quest .qreward {
+        .project:last-of-type { border-bottom: 1px solid var(--rule); }
+        .project:hover { background: var(--panel); padding-left: 16px; }
+        .project .project-title { font-family: var(--display); font-weight: 400; font-size: 1.55rem; line-height: 1.1; }
+        .project .project-stack { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.04em; color: var(--ink-faint); text-align: right; white-space: nowrap; }
+        .project .project-desc { grid-column: 1 / -1; color: var(--ink-soft); font-size: 1.02rem; max-width: 60ch; }
+        .project .project-link {
             grid-column: 1 / -1; margin-top: 8px; font-family: var(--sc); font-size: 0.84rem;
             letter-spacing: 0.06em; text-transform: uppercase; color: var(--rubric);
             display: inline-flex; gap: 7px; width: fit-content;
             border-bottom: 1px solid transparent; transition: border-color .25s var(--ease);
         }
-        .quest .qreward:hover { border-color: var(--rubric); }
-        .quest .qreward.sealed { color: var(--ink-faint); pointer-events: none; }
+        .project .project-link:hover { border-color: var(--rubric); }
 
-        /* ---- Adventure Log: XP timeline ---- */
-        .xp { position: relative; padding-left: 28px; }
-        .xp::before { content: ''; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 2px; background: var(--rule-bold); }
-        .xp-entry { position: relative; padding: 16px 0 22px; }
-        .xp-entry::before {
+        /* ---- Experience: timeline ---- */
+        .timeline { position: relative; padding-left: 28px; }
+        .timeline::before { content: ''; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 2px; background: var(--rule-bold); }
+        .timeline-entry { position: relative; padding: 16px 0 22px; }
+        .timeline-entry::before {
             content: ''; position: absolute; left: -28px; top: 22px; width: 14px; height: 14px;
             background: var(--paper); border: 2px solid var(--rubric); transform: rotate(45deg);
         }
-        .xp-entry .when { font-family: var(--mono); font-size: 0.76rem; color: var(--rubric); letter-spacing: 0.03em; }
-        .xp-entry h3 { font-family: var(--display); font-size: 1.5rem; line-height: 1.1; margin: 2px 0; }
-        .xp-entry .org { font-family: var(--sc); font-size: 0.92rem; letter-spacing: 0.05em; color: var(--ink-soft); margin-bottom: 8px; }
-        .xp-entry ul { list-style: none; }
-        .xp-entry li { position: relative; padding-left: 18px; color: var(--ink-soft); font-size: 1.0rem; margin-bottom: 5px; }
-        .xp-entry li::before { content: '+'; position: absolute; left: 0; color: var(--rubric); font-family: var(--mono); }
+        .timeline-entry .when { font-family: var(--mono); font-size: 0.76rem; color: var(--rubric); letter-spacing: 0.03em; }
+        .timeline-entry h3 { font-family: var(--display); font-size: 1.5rem; line-height: 1.1; margin: 2px 0; }
+        .timeline-entry .org { font-family: var(--sc); font-size: 0.92rem; letter-spacing: 0.05em; color: var(--ink-soft); margin-bottom: 8px; }
+        .timeline-entry ul { list-style: none; }
+        .timeline-entry li { position: relative; padding-left: 18px; color: var(--ink-soft); font-size: 1.0rem; margin-bottom: 5px; }
+        .timeline-entry li::before { content: '+'; position: absolute; left: 0; color: var(--rubric); font-family: var(--mono); }
 
-        /* ---- Proficiencies ---- */
-        .prof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0 36px; }
-        .prof { padding: 18px 4px; border-top: 1px solid var(--rule); }
-        .prof h3 { font-family: var(--sc); font-size: 0.84rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--rubric); margin-bottom: 8px; }
-        .prof .items { font-size: 1.12rem; line-height: 1.85; }
+        /* ---- Tool Categories ---- */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0 36px; }
+        .skill-group { padding: 18px 4px; border-top: 1px solid var(--rule); }
+        .skill-group h3 { font-family: var(--sc); font-size: 0.84rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--rubric); margin-bottom: 8px; }
+        .skill-group .items { font-size: 1.12rem; line-height: 1.85; }
 
-        /* ---- Trophies & Loot ---- */
-        .loot { list-style: none; }
-        .loot li { display: flex; gap: 16px; padding: 14px 4px; border-top: 1px solid var(--rule); align-items: baseline; }
-        .loot li:last-child { border-bottom: 1px solid var(--rule); }
-        .loot .rarity { font-family: var(--sc); font-size: 0.74rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--rubric); white-space: nowrap; min-width: 92px; }
-        .loot .item { font-size: 1.04rem; }
+        /* ---- Achievements ---- */
+        .achievements { list-style: none; }
+        .achievements li { display: flex; gap: 16px; padding: 14px 4px; border-top: 1px solid var(--rule); align-items: baseline; }
+        .achievements li:last-child { border-bottom: 1px solid var(--rule); }
+        .achievements .achievement-kind { font-family: var(--sc); font-size: 0.74rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--rubric); white-space: nowrap; min-width: 92px; }
+        .achievements .achievement-text { font-size: 1.04rem; }
 
-        /* ---- Send a Raven (contact) ---- */
-        .raven { background: var(--panel); border: 2px solid var(--ink); border-radius: 3px; box-shadow: 6px 6px 0 var(--rule-bold); padding: 34px 32px; }
-        .raven .invite { font-family: var(--body); font-style: italic; font-size: 1.4rem; line-height: 1.45; max-width: 32ch; margin-bottom: 22px; }
+        /* ---- Contact section ---- */
+        .contact-card { background: var(--panel); border: 2px solid var(--ink); border-radius: 3px; box-shadow: 6px 6px 0 var(--rule-bold); padding: 34px 32px; }
+        .contact-card .invite { font-family: var(--body); font-style: italic; font-size: 1.4rem; line-height: 1.45; max-width: 32ch; margin-bottom: 22px; }
         .email {
             font-family: var(--display); font-size: clamp(1.5rem, 5vw, 2.5rem); line-height: 1.1;
             display: inline-block; border-bottom: 2px solid var(--rule-bold); word-break: break-word;
@@ -498,12 +420,10 @@
             /* masthead ribbon: stack the three lines centered instead of cramming a row */
             .ribbon { flex-direction: column; gap: 3px; text-align: center; font-size: 0.74rem; letter-spacing: 0.1em; padding: 12px 0; }
             .ribbon .rubric { font-size: 0.82rem; letter-spacing: 0.14em; }
-            .stats { grid-template-columns: 1fr; }
         }
         @media (max-width: 460px) {
-            .scores { grid-template-columns: repeat(2, 1fr); }
-            .quest { grid-template-columns: 1fr; }
-            .quest .qtype { text-align: left; margin-top: 2px; }
+            .project { grid-template-columns: 1fr; }
+            .project .project-stack { text-align: left; margin-top: 2px; }
         }
     </style>
 </head>
@@ -515,23 +435,22 @@
     <nav class="topbar" aria-label="Primary">
         <div class="topbar-inner">
             <a class="brand" href="#top" title="Karan Chauhan - back to top">
-                <svg class="sigil" viewBox="0 0 100 100" aria-hidden="true">
+                <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
                     <polygon points="50,6 90,29 90,71 50,94 10,71 10,29"/>
                     <text x="50" y="64">20</text>
                 </svg>
                 <span class="brand-name">Karan Chauhan</span>
-                <span class="brand-tag" id="lvlNav">Lv.21</span>
+                <span class="brand-tag">Portfolio</span>
             </a>
             <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
                 <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#scores" title="a.k.a. Ability Scores">Skills<span class="nav-gloss">Ability Scores</span></a></li>
-                <li><a href="#quests" title="a.k.a. The Campaign Log">Projects<span class="nav-gloss">Campaign Log</span></a></li>
-                <li><a href="#log" title="a.k.a. The Adventure Log">Experience<span class="nav-gloss">Adventure Log</span></a></li>
-                <li><a href="#spellbook" title="a.k.a. Spellbook">Tools<span class="nav-gloss">Spellbook</span></a></li>
-                <li><a href="#loot" title="a.k.a. The Trophy Hall">Achievements<span class="nav-gloss">Trophy Hall</span></a></li>
-                <li><a href="#raven" title="a.k.a. Send a Raven">Contact<span class="nav-gloss">Send a Raven</span></a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -547,27 +466,25 @@
         <header class="masthead" id="top">
             <hr class="double">
             <div class="ribbon">
-                <span>Player's Handbook</span>
-                <span class="rubric">✦ Character Sheet ✦</span>
-                <span>MMXXVI Edition</span>
+                <span>Portfolio</span>
+                <span class="rubric">✦ Karan Chauhan ✦</span>
+                <span>2026 Edition</span>
             </div>
             <hr class="rule">
 
             <div class="hero">
                 <div class="ident">
-                    <div class="class-line">Human · Full Stack Engineer / Game-Designer</div>
+                    <div class="class-line">Full Stack Engineer</div>
                     <h1 class="name">Karan<br>Chauhan</h1>
                     <div class="titles">
-                        <span class="pill lvl" id="lvlMast">Lv. 21</span>
                         <span class="pill">Full Stack Engineer</span>
-                        <span class="pill align">Alignment: Chaotic Productive</span>
+                        <span class="pill">Based in Vadodara, India</span>
                     </div>
-                    <p class="flavor">
+                    <p class="intro">
                         Builds scalable web applications across the frontend, backend, database, and
                         deployment layers. Designs production-ready platforms and multi-stage LLM
                         workflows, from system design through testing and deployment.
                     </p>
-                    <p class="decoder">A software developer's portfolio - plain headings, dressed with a light D&amp;D character-sheet theme.</p>
                     <a class="resume-btn" href="Karan-Chauhan-Resume.pdf" download="Karan-Chauhan-Resume.pdf" aria-label="Download résumé (PDF)">
                         <span>Download Résumé</span>
                         <span class="rb-ic" aria-hidden="true">↓</span>
@@ -576,158 +493,121 @@
             </div>
         </header>
 
-        <!-- ============ STAT BLOCK ============ -->
-        <div class="block" id="scores">
-            <div class="block-head">
-                <h2>Top Skills</h2>
-                <span class="barline"></span>
-                <span class="tag">ability scores</span>
+        <!-- ============ SKILLS ============ -->
+        <section class="block reveal" id="skills">
+            <div class="sec-head">
+                <h2>Skills</h2>
+                <span class="plain">Technologies, tools and disciplines I work with.</span>
             </div>
-            <p class="block-note">Rated like a character sheet - the bigger the number, the stronger the skill.</p>
 
-            <div class="stats">
-                <div class="scores">
-                    <div class="score"><div class="ab">TypeScript</div><div class="mod">+4</div><div class="raw">18</div></div>
-                    <div class="score"><div class="ab">Next.js</div><div class="mod">+4</div><div class="raw">18</div></div>
-                    <div class="score"><div class="ab">Python</div><div class="mod">+3</div><div class="raw">16</div></div>
-                    <div class="score"><div class="ab">REST / API Design</div><div class="mod">+3</div><div class="raw">16</div></div>
-                    <div class="score"><div class="ab">PostgreSQL / DB</div><div class="mod">+3</div><div class="raw">15</div></div>
-                    <div class="score"><div class="ab">AI / LLM</div><div class="mod">+3</div><div class="raw">16</div></div>
-                </div>
-
-                <div class="aside">
-                    <div class="d20-card">
-                        <svg class="d20" id="d20" viewBox="0 0 100 100" role="button" tabindex="0" aria-label="Roll a d20">
-                            <polygon class="face" points="50,4 90,27 90,73 50,96 10,73 10,27"/>
-                            <polygon points="50,18 78,66 22,66"/>
-                            <line x1="50" y1="4"  x2="50" y2="18"/>
-                            <line x1="90" y1="27" x2="78" y2="66"/>
-                            <line x1="10" y1="27" x2="22" y2="66"/>
-                            <line x1="90" y1="73" x2="78" y2="66"/>
-                            <line x1="10" y1="73" x2="22" y2="66"/>
-                            <line x1="50" y1="96" x2="50" y2="66"/>
-                            <text class="num" id="d20num" x="50" y="55">20</text>
-                        </svg>
-                        <div class="roll-txt">
-                            <b id="rolltitle">Natural 20.</b>
-                            <span id="rolldesc">Roll the die - initiative for the next project. Click it.</span>
-                        </div>
-                    </div>
-
-                    <div class="conditions">
-                        <div class="lab">Active Conditions</div>
-                        <ul>
-                            <li>Chronically Online <em>- perception advantage on memes</em></li>
-                            <li>Bedrotting <em>- +2 to ideas, −2 to leaving the room</em></li>
-                            <li>Anime Brainrot <em>- immune to filler episodes</em></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="skills-grid">
+                <div class="skill-group"><h3>Languages</h3><p class="items">TypeScript · JavaScript · Python · PostgreSQL · HTML · CSS</p></div>
+                <div class="skill-group"><h3>Frontend</h3><p class="items">Next.js · React.js · Tailwind CSS · Responsive Design · Reusable Architecture</p></div>
+                <div class="skill-group"><h3>Backend &amp; AI</h3><p class="items">Python · REST APIs · Node.js · Authentication · LLM Pipelines · AI Agents</p></div>
+                <div class="skill-group"><h3>Databases</h3><p class="items">PostgreSQL · MongoDB · Database Design · CRUD Operations</p></div>
+                <div class="skill-group"><h3>Cloud &amp; Tools</h3><p class="items">Git · GitHub · Vercel · Firebase · Docker · AWS · VS Code · Figma</p></div>
+                <div class="skill-group"><h3>Concepts</h3><p class="items">System Design · API Integration · Performance Optimization · SEO · WebAssembly · Solidity</p></div>
             </div>
-        </div>
+        </section>
 
         <hr class="rule">
 
-        <!-- ============ CAMPAIGN LOG (projects) ============ -->
-        <section class="reveal" id="quests">
+        <!-- ============ PROJECTS ============ -->
+        <section class="reveal" id="projects">
             <div class="sec-head">
-                <span class="eyebrow">The Campaign Log</span>
                 <h2>Projects</h2>
                 <span class="plain">Things I've designed, built and shipped.</span>
             </div>
 
-            <div class="quest-group">
+            <div class="project-group">
                 <div class="cat-head">
                     <h3 class="cat-name">Web &amp; App Builds</h3>
-                    <span class="cat-tag">Main Quests</span>
                     <span class="cat-rule"></span>
-                    <span class="cat-count">5</span>
+                    <span class="cat-count">5 projects</span>
                 </div>
 
-                <article class="quest">
-                    <h4 class="qtitle">Accelix.ai</h4>
-                    <p class="qtype">Next.js · Python · AI-Native Platform</p>
-                    <p class="qdesc">An AI-powered pre-design validation platform for electronics hardware. Nine analysis engines audit architecture, compliance, and risk before a single schematic is drawn — delivering what hardware consultants take weeks to produce, in under 15 minutes.</p>
-                    <a class="qreward" href="https://accelix.ai" target="_blank" rel="noopener">Claim reward →</a>
+                <article class="project">
+                    <h4 class="project-title">Accelix.ai</h4>
+                    <p class="project-stack">Next.js · Python · AI-Native Platform</p>
+                    <p class="project-desc">An AI-powered pre-design validation platform for electronics hardware. Nine analysis engines audit architecture, compliance, and risk before a single schematic is drawn — delivering what hardware consultants take weeks to produce, in under 15 minutes.</p>
+                    <a class="project-link" href="https://accelix.ai" target="_blank" rel="noopener">View project →</a>
                 </article>
 
-                <article class="quest">
-                    <h4 class="qtitle">Patram PDF</h4>
-                    <p class="qtype">WebAssembly · Client-Side Computation</p>
-                    <p class="qdesc">A 100% client-side PDF workspace - merge, split, and delete pages entirely in the browser's memory thread via vast library support and WebAssembly. Files never leave your device, validation badges make the privacy guarantee visible, and it keeps working fully offline with zero backend calls.</p>
-                    <a class="qreward" href="https://patrampdf.karanchauhan.me/" target="_blank" rel="noopener">Claim reward →</a>
+                <article class="project">
+                    <h4 class="project-title">Patram PDF</h4>
+                    <p class="project-stack">WebAssembly · Client-Side Computation</p>
+                    <p class="project-desc">A 100% client-side PDF workspace - merge, split, and delete pages entirely in the browser's memory thread via vast library support and WebAssembly. Files never leave your device, validation badges make the privacy guarantee visible, and it keeps working fully offline with zero backend calls.</p>
+                    <a class="project-link" href="https://patrampdf.karanchauhan.me/" target="_blank" rel="noopener">View project →</a>
                 </article>
 
-                <article class="quest">
-                    <h4 class="qtitle">EduChain Lib</h4>
-                    <p class="qtype">Web3 · Polygon · IPFS</p>
-                    <p class="qdesc">A decentralized educational library. Guards creators' work behind smart-contract-gated access and automates royalty distribution on the Polygon chain.</p>
-                    <a class="qreward" href="https://digital-library-bice.vercel.app/" target="_blank" rel="noopener">Claim reward →</a>
+                <article class="project">
+                    <h4 class="project-title">EduChain Lib</h4>
+                    <p class="project-stack">Web3 · Polygon · IPFS</p>
+                    <p class="project-desc">A decentralized educational library. Guards creators' work behind smart-contract-gated access and automates royalty distribution on the Polygon chain.</p>
+                    <a class="project-link" href="https://digital-library-bice.vercel.app/" target="_blank" rel="noopener">View project →</a>
                 </article>
 
-                <article class="quest">
-                    <h4 class="qtitle">Ocean Amore</h4>
-                    <p class="qtype">HTML · CSS · JS</p>
-                    <p class="qdesc">A resin product store, built end-to-end from design to deployment, with measured animation and interactive components.</p>
-                    <a class="qreward" href="https://oceanamore.vercel.app/" target="_blank" rel="noopener">Claim reward →</a>
+                <article class="project">
+                    <h4 class="project-title">Ocean Amore</h4>
+                    <p class="project-stack">HTML · CSS · JS</p>
+                    <p class="project-desc">A resin product store, built end-to-end from design to deployment, with measured animation and interactive components.</p>
+                    <a class="project-link" href="https://oceanamore.vercel.app/" target="_blank" rel="noopener">View project →</a>
                 </article>
 
-                <article class="quest">
-                    <h4 class="qtitle">Vision-Based Identity System</h4>
-                    <p class="qtype">React · Node.js · Express · MongoDB</p>
-                    <p class="qdesc">A full-stack identity verification platform with a React monitoring dashboard, REST APIs for authentication and identity workflows, MongoDB data models, and responsive application-state monitoring.</p>
-                    <a class="qreward" href="https://github.com/kckckc23/VBIS" target="_blank" rel="noopener">View on GitHub →</a>
+                <article class="project">
+                    <h4 class="project-title">Vision-Based Identity System</h4>
+                    <p class="project-stack">React · Node.js · Express · MongoDB</p>
+                    <p class="project-desc">A full-stack identity verification platform with a React monitoring dashboard, REST APIs for authentication and identity workflows, MongoDB data models, and responsive application-state monitoring.</p>
+                    <a class="project-link" href="https://github.com/kckckc23/VBIS" target="_blank" rel="noopener">View project →</a>
                 </article>
             </div>
 
-            <div class="quest-group">
+            <div class="project-group">
                 <div class="cat-head">
                     <h3 class="cat-name">Games</h3>
-                    <span class="cat-tag">Side-Quests</span>
                     <span class="cat-rule"></span>
-                    <span class="cat-count">1</span>
+                    <span class="cat-count">1 project</span>
                 </div>
 
-                <article class="quest">
-                    <h4 class="qtitle">Arcadeium</h4>
-                    <p class="qtype">HTML · CSS · JavaScript</p>
-                    <p class="qdesc">Classic arcade games - Snake, Tic-Tac-Toe, Pong, Space Invaders - with reusable gameplay logic and clean state management.</p>
-                    <a class="qreward" href="https://arcadeium.vercel.app/" target="_blank" rel="noopener">Claim reward →</a>
+                <article class="project">
+                    <h4 class="project-title">Arcadeium</h4>
+                    <p class="project-stack">HTML · CSS · JavaScript</p>
+                    <p class="project-desc">Classic arcade games - Snake, Tic-Tac-Toe, Pong, Space Invaders - with reusable gameplay logic and clean state management.</p>
+                    <a class="project-link" href="https://arcadeium.vercel.app/" target="_blank" rel="noopener">View project →</a>
                 </article>
             <!--
-                <article class="quest">
-                    <span class="qtitle">Pixel Racer X</span>
-                    <span class="qtype">Phaser.js · Arcade</span>
-                    <p class="qdesc">A top-down retro racer focused on vehicle control, physics, and track balance.</p>
-                    <a class="qreward" href="https://play.aicade.io/GNl8Mg3NeJdwFLeb" target="_blank" rel="noopener">Enter dungeon →</a>
+                <article class="project">
+                    <span class="project-title">Pixel Racer X</span>
+                    <span class="project-stack">Phaser.js · Arcade</span>
+                    <p class="project-desc">A top-down retro racer focused on vehicle control, physics, and track balance.</p>
+                    <a class="project-link" href="https://play.aicade.io/GNl8Mg3NeJdwFLeb" target="_blank" rel="noopener">View project →</a>
                 </article>
 
-                <article class="quest">
-                    <span class="qtitle">Visa Venture</span>
-                    <span class="qtype">Phaser.js · Runner</span>
-                    <p class="qdesc">A side-scrolling runner about obstacle avoidance and speed-based progression, crafted with AI-assisted code generation.</p>
-                    <a class="qreward" href="https://play.aicade.io/gJ9f6s9FLq2F1OAk" target="_blank" rel="noopener">Enter dungeon →</a>
+                <article class="project">
+                    <span class="project-title">Visa Venture</span>
+                    <span class="project-stack">Phaser.js · Runner</span>
+                    <p class="project-desc">A side-scrolling runner about obstacle avoidance and speed-based progression, crafted with AI-assisted code generation.</p>
+                    <a class="project-link" href="https://play.aicade.io/gJ9f6s9FLq2F1OAk" target="_blank" rel="noopener">View project →</a>
                 </article>
 
-                <article class="quest">
-                    <span class="qtitle">Garden of Eden</span>
-                    <span class="qtype">Phaser.js · Arcade</span>
-                    <p class="qdesc">A Snake variant with persistent hazards and tuned risk-reward.</p>
-                    <a class="qreward" href="https://play.aicade.io/GNl8Mg3NeJdwFLeb" target="_blank" rel="noopener">Enter dungeon →</a>
+                <article class="project">
+                    <span class="project-title">Garden of Eden</span>
+                    <span class="project-stack">Phaser.js · Arcade</span>
+                    <p class="project-desc">A Snake variant with persistent hazards and tuned risk-reward.</p>
+                    <a class="project-link" href="https://play.aicade.io/GNl8Mg3NeJdwFLeb" target="_blank" rel="noopener">View project →</a>
                 </article>
             -->
             </div>
         </section>
 
-        <!-- ============ ADVENTURE LOG (journey) ============ -->
-        <section class="reveal" id="log">
+        <!-- ============ EXPERIENCE ============ -->
+        <section class="reveal" id="experience">
             <div class="sec-head">
-                <span class="eyebrow">The Adventure Log</span>
                 <h2>Experience</h2>
                 <span class="plain">Where I've worked and studied.</span>
             </div>
-            <div class="xp">
-                <div class="xp-entry">
+            <div class="timeline">
+                <div class="timeline-entry">
                     <div class="when">Aug 2026 - Current · Full Stack Engineer</div>
                     <h3>Full Stack Engineer</h3>
                     <div class="org">DignifiedMe Technologies Pvt. Ltd. - <a href="https://accelix.ai" target="_blank" rel="noopener" style="color:var(--rubric);border-bottom:1px solid var(--rule-bold);">Accelix.ai</a></div>
@@ -740,8 +620,8 @@
                     </ul>
                 </div>
 
-                <div class="xp-entry">
-                    <div class="when">Feb 2026 - July 2026 · The Training Arc</div>
+                <div class="timeline-entry">
+                    <div class="when">Feb 2026 - July 2026 · Internship</div>
                     <h3>UI/UX &amp; Frontend Engineering Intern</h3>
                     <div class="org">DignifiedMe Technologies Pvt. Ltd. - <a href="https://accelix.ai" target="_blank" rel="noopener" style="color:var(--rubric);border-bottom:1px solid var(--rule-bold);">Accelix.ai</a></div>
                     <ul>
@@ -753,8 +633,8 @@
                     </ul>
                 </div>
 
-                <div class="xp-entry">
-                    <div class="when">2022 - 2026 · The Origin Arc</div>
+                <div class="timeline-entry">
+                    <div class="when">2022 - 2026 · Education</div>
                     <h3>B.Tech, Computer Science Engineering</h3>
                     <div class="org">Parul University, Vadodara</div>
                     <ul>
@@ -765,48 +645,28 @@
             </div>
         </section>
 
-        <!-- ============ PROFICIENCIES (toolbox) ============ -->
-        <section class="reveal" id="spellbook">
+        <!-- ============ ACHIEVEMENTS ============ -->
+        <section class="reveal" id="achievements">
             <div class="sec-head">
-                <span class="eyebrow">Spellbook</span>
-                <h2>Tools &amp; Tech</h2>
-                <span class="plain">The languages, frameworks and tools I work with.</span>
-            </div>
-
-            <div class="prof-grid">
-                <div class="prof"><h3>Languages</h3><p class="items">TypeScript · JavaScript ·  Python · PostgreSQL · HTML · CSS</p></div>
-                <div class="prof"><h3>Frontend</h3><p class="items">Next.js · React.js · Tailwind CSS · Responsive Design · Reusable Architecture</p></div>
-                <div class="prof"><h3>Backend &amp; AI</h3><p class="items">Python · REST APIs · Node.js · Authentication · LLM Pipelines · AI Agents</p></div>
-                <div class="prof"><h3>Databases</h3><p class="items">PostgreSQL · MongoDB · Database Design · CRUD Operations</p></div>
-                <div class="prof"><h3>Cloud &amp; Tools</h3><p class="items">Git · GitHub · Vercel · Firebase · Docker · AWS · VS Code · Figma</p></div>
-                <div class="prof"><h3>Concepts</h3><p class="items">System Design · API Integration · Performance Optimization · SEO · WebAssembly · Solidity</p></div>
-            </div>
-        </section>
-
-        <!-- ============ TROPHIES & LOOT (recognition) ============ -->
-        <section class="reveal" id="loot">
-            <div class="sec-head">
-                <span class="eyebrow">The Trophy Hall</span>
                 <h2>Achievements</h2>
                 <span class="plain">Awards, recognition and certifications.</span>
             </div>
 
-            <ul class="loot">
-                <li><span class="rarity">★ Legendary</span><span class="item">Winner - The Graph-powered On-Campus Hackathon &amp; Bootcamp, Parul University.</span></li>
-                <li><span class="rarity">Epic</span><span class="item">Authored the review paper "Vision-Based Identity System".</span></li>
+            <ul class="achievements">
+                <li><span class="achievement-kind">Award</span><span class="achievement-text">Winner - The Graph-powered On-Campus Hackathon &amp; Bootcamp, Parul University.</span></li>
+                <li><span class="achievement-kind">Publication</span><span class="achievement-text">Authored the review paper "Vision-Based Identity System".</span></li>
             </ul>
         </section>
 
-        <!-- ============ SEND A RAVEN (contact) ============ -->
-        <section class="reveal" id="raven">
+        <!-- ============ CONTACT ============ -->
+        <section class="reveal" id="contact">
             <div class="sec-head">
-                <span class="eyebrow">Send a Raven</span>
                 <h2>Contact</h2>
                 <span class="plain">How to get in touch with me.</span>
             </div>
 
-            <div class="raven">
-                <p class="invite">A new quest, a guild to join, or just a roll for friendship? My inbox is always open.</p>
+            <div class="contact-card">
+                <p class="invite">Have a project to discuss or just want to connect? My inbox is always open.</p>
                 <a class="email" href="mailto:chauhankaran2305@gmail.com">chauhankaran2305@gmail.com</a>
                 <div class="channels">
                     <a href="https://www.linkedin.com/in/chauhankaran2305/" target="_blank" rel="noopener">LinkedIn</a>
@@ -825,7 +685,7 @@
         <footer>
             <hr class="double">
             <div class="colophon">
-                <span>© MMXXVI · Karan Chauhan</span>
+                <span>© 2026 · Karan Chauhan</span>
                 <span>Hand-set in IM Fell &amp; EB Garamond · vanilla HTML/CSS/JS · zero build</span>
             </div>
         </footer>
@@ -833,19 +693,6 @@
     </div>
 
     <script>
-        /* ---- character level = real age, from the browser's date (born 23 Jan 2005) ---- */
-        (function setLevel() {
-            const BIRTH = { y: 2005, m: 1, d: 23 };   // 23 Jan 2005
-            const now = new Date();
-            let age = now.getFullYear() - BIRTH.y;
-            const month = now.getMonth() + 1;          // 1–12
-            // not had this year's birthday yet? subtract one
-            if (month < BIRTH.m || (month === BIRTH.m && now.getDate() < BIRTH.d)) age--;
-            const nav = document.getElementById('lvlNav');
-            const mast = document.getElementById('lvlMast');
-            if (nav) nav.textContent = 'Lv.' + age;
-            if (mast) mast.textContent = 'Lv. ' + age;
-        })();
 
         /* ---- navbar: mobile drawer toggle ---- */
         const toggle = document.getElementById('navToggle');
@@ -896,50 +743,6 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-        /* roll the d20 - fair 1d20: tumbles through random faces, then lands on a real result */
-        const d20 = document.getElementById('d20');
-        const num = document.getElementById('d20num');
-        const title = document.getElementById('rolltitle');
-        const desc = document.getElementById('rolldesc');
-        let rolling = false;
-
-        const d = () => Math.floor(Math.random() * 20) + 1;
-
-        function flavor(n) {
-            if (n === 20) return ['Natural 20! ✦', 'Critical hit. Roll again?'];
-            if (n === 1)  return ['Natural 1.', 'Critical miss - blame the dice, not the build.'];
-            if (n >= 15)  return [`Rolled ${n}.`, 'A solid success. Onward.'];
-            if (n >= 8)   return [`Rolled ${n}.`, 'You scrape by. Good enough to ship.'];
-            return [`Rolled ${n}.`, 'A rough roll. Take a short rest and try again.'];
-        }
-
-        function roll() {
-            if (rolling) return;
-            rolling = true;
-            d20.classList.add('rolling');
-            const result = d();           // the real, fair outcome
-            num.classList.remove('crit', 'fail');
-            let ticks = 0;
-            const total = 9;
-            const tumble = setInterval(() => {
-                ticks++;
-                if (ticks >= total) {
-                    clearInterval(tumble);
-                    num.textContent = result;
-                    if (result === 20) num.classList.add('crit');
-                    else if (result === 1) num.classList.add('fail');
-                    const [t, s] = flavor(result);
-                    title.textContent = t;
-                    desc.textContent = s;
-                    rolling = false;
-                } else {
-                    num.textContent = d();    // random face while tumbling
-                }
-            }, 65);
-            setTimeout(() => d20.classList.remove('rolling'), 400);
-        }
-        d20.addEventListener('click', roll);
-        d20.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); roll(); } });
     </script>
 </body>
 
